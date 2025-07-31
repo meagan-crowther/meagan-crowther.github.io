@@ -23,31 +23,43 @@
         margin-left: auto;
         margin-top: 20px;
       }
+
       @media screen and (min-width: 768px) {
         .responsive-image {
           max-width: 320px;
           margin-left: 40px;
           margin-top: 40px;
         }
+        .menuToggle {
+          display: none;
+        }
       }
 
-/* Hide menu toggle on desktop */
-@media screen and (min-width: 768px) {
-  .menuToggle {
-    display: none;
-  }
-}
+      @media screen and (max-width: 767px) {
+        .menuToggle {
+          position: fixed;
+          top: 20px;
+          left: 20px;
+          z-index: 1001;
+        }
 
-/* Optional: Style menu toggle for mobile */
-@media screen and (max-width: 767px) {
-  .menuToggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-  }
-}
+        #sidebar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 260px;
+          height: 100vh;
+          background: #fff;
+          box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+          transform: translateX(-100%);
+          transition: transform 0.3s ease;
+          z-index: 1000;
+        }
 
+        #wrapper.menu-visible #sidebar {
+          transform: translateX(0);
+        }
+      }
     </style>
   </head>
   <body class="is-preload">
@@ -55,10 +67,10 @@
     <!-- Wrapper -->
     <div id="wrapper">
 
-<!-- Mobile Menu Toggle -->
-<a href="#menu" class="menuToggle">
-  <img src="images/bars-solid-full.svg" alt="Menu" style="width: 32px; height: 32px;" />
-</a>
+      <!-- Mobile Menu Toggle -->
+      <a href="#menu" class="menuToggle">
+        <img src="images/bars-solid-full.svg" alt="Menu" style="width: 32px; height: 32px;" />
+      </a>
 
       <!-- Main -->
       <div id="main">
@@ -195,11 +207,11 @@
 									</div>
 								</section>
 
+
           <!-- Footer -->
           <footer id="footer">
             <p class="copyright">&copy; Meagan Crowther. Design Template: <a href="https://html5up.net">HTML5 UP</a>.</p>
           </footer>
-
         </div>
       </div>
 
@@ -226,5 +238,19 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const toggle = document.querySelector('.menuToggle');
+        const wrapper = document.getElementById('wrapper');
+
+        if (toggle && wrapper) {
+          toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            wrapper.classList.toggle('menu-visible');
+          });
+        }
+      });
+    </script>
   </body>
 </html>
