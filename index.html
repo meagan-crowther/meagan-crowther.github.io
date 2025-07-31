@@ -1,56 +1,101 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Meagan E Crowther</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+  <head>
+    <title>Meagan E Crowther</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      .responsive-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+      .responsive-text {
+        flex: 1;
+        min-width: 250px;
+      }
+      .responsive-image {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        border-radius: 8px;
+        margin-left: auto;
+        margin-top: 20px;
+      }
+      @media screen and (min-width: 768px) {
+        .responsive-image {
+          max-width: 320px;
+          margin-left: 40px;
+          margin-top: 40px;
+        }
+      }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+/* Hide menu toggle on desktop */
+@media screen and (min-width: 768px) {
+  .menuToggle {
+    display: none;
+  }
+}
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+/* Optional: Style menu toggle for mobile */
+@media screen and (max-width: 767px) {
+  .menuToggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+  }
+}
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Meagan E Crowther</strong></a>
-									<ul class="icons">
-										<li><a href="https://twitter.com/MeaganECrowther" class="icon brands fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
-										<li><a href="https://au.linkedin.com/in/meagan-crowther-3124201b1" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-										<li><a href="https://github.com/meagan-crowther" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-										<li><a href="https://orcid.org/0000-0003-2857-2636" class="icon brands fa-orcid" target="_blank"><span class="label">ORCID</span></a></li>
-										<li><a href="mailto:meagan.crowther@monash.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-									</ul>
-								</header>
+    </style>
+  </head>
+  <body class="is-preload">
 
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>Hi, I’m Meagan Crowther<br /></h1>
-										</header>
-										<p>POSTDOCTORAL RESERACH FELLOW</p>
-		I am a passionate Early Career Researcher dedicated to making sleep science <b>accessible</b>, <b>community-informed</b> and <b>data-driven</b>.
-                  <br> My research focuses on the development and implementation of interventions to improve sleep, and where possible, prevent the onset of clinical sleep disorders.
-                  I specialise in sleep, wellbeing and health in those who may be vulnerable to inadequate sleep, including new parents and those engaged in shift work.<br><br>
+    <!-- Wrapper -->
+    <div id="wrapper">
 
+<!-- Mobile Menu Toggle -->
+<a href="#menu" class="menuToggle">
+  <img src="images/bars-solid-full.svg" alt="Menu" style="width: 32px; height: 32px;" />
+</a>
+
+      <!-- Main -->
+      <div id="main">
+        <div class="inner">
+
+          <!-- Header -->
+          <header id="header">
+            <a href="index.html" class="logo"><strong>Meagan E Crowther</strong></a>
+            <ul class="icons">
+              <li><a href="https://twitter.com/MeaganECrowther" class="icon brands fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+              <li><a href="https://au.linkedin.com/in/meagan-crowther-3124201b1" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+              <li><a href="https://github.com/meagan-crowther" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+              <li><a href="https://orcid.org/0000-0003-2857-2636" class="icon brands fa-orcid" target="_blank"><span class="label">ORCID</span></a></li>
+              <li><a href="mailto:meagan.crowther@monash.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+          </header>
+
+          <!-- Banner -->
+          <section id="banner">
+            <div class="responsive-container">
+              <div class="responsive-text">
+                <header><h1>Hi, I’m Meagan Crowther</h1></header>
+                <p><strong>POSTDOCTORAL RESEARCH FELLOW</strong></p>
+                <p>
+                  I am a passionate Early Career Researcher dedicated to making sleep science <b>accessible</b>, <b>community-informed</b> and <b>data-driven</b>.<br>
+                  My research focuses on the development and implementation of interventions to improve sleep, and where possible, prevent the onset of clinical sleep disorders. I specialise in sleep, wellbeing and health in those who may be vulnerable to inadequate sleep, including new parents and those engaged in shift work.<br><br>
                   Through translating research into practical evidence-based solutions, I aim to better support families and communities to get better sleep and reap the benefits.<br><br>
-
                   Alongside my body of research, I actively advocate for Early Career Researchers through my roles as founding member and current Co-Chair of the Australasian Sleep Association 
                   <a href="https://sleep.org.au/Public/Public/About/F-Councils/NEST.aspx" target="_blank">Network of Early career Sleep researchers in Training (NEST)</a> 
-                  and Chair of the Monash School of Psychological Sciences Early Career Researcher Committee.<br>
+                  and Chair of the Monash School of Psychological Sciences Early Career Researcher Committee.
                 </p>
-
-
-</div>
-<span class="image object">
-  <img src="images/crowther.jpg" alt="" style="width: 60%; height: auto; margin-left: 60px; margin-top: 60px;" />
-</span>
-</section>
+              </div>
+              <div>
+                <img src="images/crowther.jpg" alt="Meagan Crowther" class="responsive-image" />
+              </div>
+            </div>
+          </section>
 
 							<!-- Section -->
 								<section>
@@ -149,42 +194,37 @@
 
 									</div>
 								</section>
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Meagan Crowther. Design Template: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
 
-						</div>
-					</div>
+          <!-- Footer -->
+          <footer id="footer">
+            <p class="copyright">&copy; Meagan Crowther. Design Template: <a href="https://html5up.net">HTML5 UP</a>.</p>
+          </footer>
 
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="publications.html">Publications</a></li>
-										<li><a href="projects.html">Projects</a></li>
-										<li><a href="mailto:meagan.crowther@monash.edu">Get in Contact</a></li>
-									</ul>
+        </div>
+      </div>
 
-								</nav>
+      <!-- Sidebar -->
+      <div id="sidebar">
+        <div class="inner">
+          <nav id="menu">
+            <header class="major"><h2>Menu</h2></header>
+            <ul>
+              <li><a href="index.html">Homepage</a></li>
+              <li><a href="publications.html">Publications</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="mailto:meagan.crowther@monash.edu">Get in Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
 
+    </div>
 
-						</div>
-					</div>
+    <!-- Scripts -->
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  </body>
 </html>
