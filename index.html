@@ -23,13 +23,13 @@
         margin-left: auto;
         margin-top: 20px;
       }
-
       @media screen and (min-width: 768px) {
         .responsive-image {
           max-width: 320px;
           margin-left: 40px;
           margin-top: 40px;
         }
+
         .menuToggle {
           display: none;
         }
@@ -40,20 +40,12 @@
           position: fixed;
           top: 20px;
           left: 20px;
-          z-index: 1001;
+          z-index: 1000;
         }
 
         #sidebar {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 260px;
-          height: 100vh;
-          background: #fff;
-          box-shadow: 2px 0 10px rgba(0,0,0,0.1);
           transform: translateX(-100%);
           transition: transform 0.3s ease;
-          z-index: 1000;
         }
 
         #wrapper.menu-visible #sidebar {
@@ -206,7 +198,6 @@
 
 									</div>
 								</section>
-
 
           <!-- Footer -->
           <footer id="footer">
